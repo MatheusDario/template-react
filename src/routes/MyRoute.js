@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export default function MyRout({ component: Componenet, isClosed, ...rest }) {
   const isLoggedIn = false;
 
-  if (isClosed && isLoggedIn) {
+  if (isClosed && !isLoggedIn) {
     return (
       <Redirect
         to={{ pathname: '/login', state: { prevPath: rest.location.pathname } }}
